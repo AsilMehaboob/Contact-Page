@@ -1,4 +1,3 @@
-
 # Contact Page
 
 This is a simple and responsive contact page built using Chakra UI, React, Vite, and TypeScript. The page includes a form that allows users to submit their contact information and message.
@@ -16,6 +15,7 @@ This is a simple and responsive contact page built using Chakra UI, React, Vite,
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Chakra UI](https://chakra-ui.com/)
+- [Formspree](https://formspree.io/)
 
 ## Getting Started
 
@@ -55,11 +55,6 @@ To start the development server, run:
 npm run dev
 ```
 
-or
-
-```bash
-yarn dev
-```
 
 The application will be available at `http://localhost:3000`.
 
@@ -70,43 +65,6 @@ To build the application for production, run:
 ```bash
 npm run build
 ```
-
-or
-
-```bash
-yarn build
-```
-
-The optimized and minified files will be generated in the `dist` directory.
-
-## Project Structure
-
-```plaintext
-├── public
-│   └── index.html           # Main HTML file
-├── src
-│   ├── components
-│   │   └── FormSection.tsx  # Form component
-│   ├── App.tsx              # Main App component
-│   ├── main.tsx             # Entry point for the application
-│   └── index.css            # Global CSS
-├── .gitignore               # Git ignore file
-├── package.json             # npm or yarn package file
-├── tsconfig.json            # TypeScript configuration
-└── vite.config.ts           # Vite configuration
-```
-
-## Configuration
-
-### Environment Variables
-
-To change the form submission endpoint, you can set the environment variable in a `.env` file at the root of the project:
-
-```plaintext
-VITE_FORM_ENDPOINT=https://formspree.io/f/movavoga
-```
-
-Make sure to replace the URL with your actual endpoint.
 
 ## Contributing
 
@@ -123,3 +81,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [React](https://reactjs.org/) for the framework
 - [Formspree](https://formspree.io/) for the form handling service
 ```
+
+Feel free to further customize this README file to better fit your project's specifics.
