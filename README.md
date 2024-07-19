@@ -74,5 +74,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Vite](https://vitejs.dev/) for the build tool
 - [React](https://reactjs.org/) for the framework
 - [Formspree](https://formspree.io/) for the form handling service
-```
 
