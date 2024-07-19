@@ -1,30 +1,77 @@
-# React + TypeScript + Vite
+# Contact Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple and responsive contact page built using Chakra UI, React, Vite, and TypeScript. The page includes a form that allows users to submit their contact information and message.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: The layout is fully responsive and works well on all screen sizes.
+- **Form Validation**: Basic form validation is implemented to ensure all required fields are filled.
+- **Dark Mode Support**: The page supports both light and dark modes, adapting to the user's system preferences.
+- **Form Submission**: Form data is sent to a specified endpoint using a POST request.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Formspree](https://formspree.io/)
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (>= 12.x)
+- npm (>= 6.x) or yarn (>= 1.x)
+
+### Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/contact-page.git
+    cd contact-page
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+The application will be available at `http://localhost:3000`.
+
+### Building for Production
+
+To build the application for production, run:
+
+```bash
+npm run build
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any bugs or improvements.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Chakra UI](https://chakra-ui.com/) for the UI components
+- [Vite](https://vitejs.dev/) for the build tool
+- [React](https://reactjs.org/) for the framework
+- [Formspree](https://formspree.io/) for the form handling service
+
