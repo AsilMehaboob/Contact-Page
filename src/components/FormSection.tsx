@@ -9,6 +9,7 @@ import {
   Heading,
   Flex,
   useColorMode,
+  useColorModeValue,
   Text,
   useToast,
 } from '@chakra-ui/react';
@@ -19,6 +20,7 @@ const FormSection: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [messageCount, setMessageCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -36,7 +38,9 @@ const FormSection: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
+    setIsSubmitting(true);
+    const formElement = event.target as HTMLFormElement;
+    const formData = new FormData(formElement);
     const data = Object.fromEntries(formData.entries());
 
     console.log(data);
@@ -58,7 +62,7 @@ const FormSection: React.FC = () => {
           duration: 5000,
           isClosable: true,
         });
-        event.target.reset();
+        formElement.reset();
         setMessage('');
         setMessageCount(0);
       } else {
@@ -78,6 +82,8 @@ const FormSection: React.FC = () => {
         duration: 5000,
         isClosable: true,
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -91,7 +97,7 @@ const FormSection: React.FC = () => {
       mb={{ base: 12, md: 0 }}
     >
       <Heading as="h2" size="lg" mb={6}>Get in Touch.</Heading>
-      <Text color="grey" size="xs">Got a question or need help? Complete the form below, and we'll respond to you as quickly as we can.</Text><br/>
+      <Text color="gray.500" mb={4}>Got a question or need help? Complete the form below, and we'll respond to you as quickly as we can.</Text>
       <form onSubmit={handleSubmit}>
         <Flex direction="column" mb={4}>
           <Flex>
@@ -145,7 +151,9 @@ const FormSection: React.FC = () => {
           type="submit"
           width="full"
           mt={4}
-          bg={colorMode === 'dark' ? 'gray' : 'black'}
+          bg={useColorModeValue('black', 'gray')}
+          isLoading={isSubmitting}
+          isDisabled={isSubmitting}
         >
           Submit
         </Button>

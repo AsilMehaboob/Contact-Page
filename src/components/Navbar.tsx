@@ -1,6 +1,6 @@
 // NavBar.tsx
 import React from 'react';
-import { Box, Heading, Flex, Button, HStack, Link, Text } from '@chakra-ui/react';
+import { Box, Heading, Flex, HStack, Link, Text } from '@chakra-ui/react';
 import ToggleColorModeButton from './ToggleColorModeButton';
 
 const NavBar: React.FC = () => {

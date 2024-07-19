@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, useColorModeValue, ColorModeProvider } from '@chakra-ui/react';
+import { Box, useColorModeValue } from '@chakra-ui/react';
 import NavBar from './components/Navbar';
 import FormSection from './components/FormSection';
 import MapSection from './components/MapSection';
