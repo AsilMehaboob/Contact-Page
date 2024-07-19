@@ -41,12 +41,6 @@ Make sure you have the following installed:
     npm install
     ```
 
-    or
-
-    ```bash
-    yarn install
-    ```
-
 ### Running the Application
 
 To start the development server, run:
